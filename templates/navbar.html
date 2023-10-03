@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1022/1022827.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+
+<body>
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+
+      <a href="/home" class="logo">
+        <img src="{{url_for('static', filename='images/logo.svg')}}" alt="Ridex logo" />
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li>
+            <a href="/home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="/explore" class="navbar-link" data-nav-link
+              >Explore cars</a
+            >
+          </li>
+
+          <li>
+            <a href="/about" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          <li>
+            <a href="/blogs" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">+91 799 703 82 45</a>
+
+          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="/" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Login/Register</span>
+        </a>
+
+        <a href="/register"  target="_blank"  class="btn user-btn"  aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+
+        <button
+          class="nav-toggle-btn"
+          data-nav-toggle-btn
+          aria-label="Toggle Menu"
+        >
+          <span class="one"></span>
+          <span class=" two"></span>
+          <span class=" three"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+{% block content %}{% endblock %}
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/home" class="logo">
+          <img src="{{url_for('static', filename='images/logo.svg')}}" alt="Ridex logo" />
+        </a>
+
+        <p class="footer-text">
+          Search for cheap rental electric cars in India. With a diverse
+          fleet of 19,000 vehicles, Ridex offers its consumers an attractive
+          and fun selection.
+        </p>
+      </div>
+
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Company</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">About us</a>
+        </li>
+
+        <li>
+          <a href="#featured-car" class="footer-link">Pricing plans</a>
+        </li>
+
+        <li>
+          <a href="#blog" class="footer-link">Our blog</a>
+        </li>
+
+        <li>
+          <a href="karthik16.netlify.app" class="footer-link">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Support</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Help center</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Ask a question</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy policy</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Terms & conditions</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Neighborhoods in India</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Andhra Pradesh</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Hyderabad</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Mumbai</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Goa</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Delhi</a>
+        </li>
+
+        <li>
+          <a href="" class="footer-link">Bangalore</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <ul class="social-list">
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=100071345375225"
+            class="social-link"
+          >
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.instagram.com/guruju_karthikeya.naidu/"
+            class="social-link"
+          >
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://twitter.com/KarthikeyaGuru2" class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.linkedin.com/in/karthikeya-guruju/"
+            class="social-link"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:karthikeyaguruju@gmail.com" class="social-link">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </li>
+      </ul>
+
+      <p class="copyright">
+        &copy; 2023 <a href="karthik16.netlify.app">KarthikeyaGuruju</a>.
+        All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
